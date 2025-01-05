@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krawczynski</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: black;
+            color:white;
+        }
+        .id{
+            float:left;
+        }
+        .right{
+            float:right;
+        }
+        a{
+            color:white;
+        }
+        @media only screen and (min-width: 1025px) {
+        .right {
+            margin-right:20%;
+        }
+        .id{
+            margin-left:20%;
+        }
+        .skils{
+            display: inline-flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: center;
+align-content: center;
+            
+        }
+    } 
+
+    @media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+   .skils{
+    margin-top:300px;
+   }
+}
+    </style>
+    <script>
+        slide = 2;
+        function boot(){
+            slider();
+        }
+        function slider(){
+            setTimeout(() => {
+                document.getElementById('slider').setAttribute("src",`img/${slide}.png`);
+                if (slide == 6){slide = 1;}
+                else{slide += 1;}
+                slider();
+            } ,3000);
+        }
+    </script>
+</head>
+<body onload="boot()">
+    <center>
+        <h1>Mateusz Krawczyński</h1>
+        <h2>E-Mail: mati.krawe2@gmail.com</h2>
+        <h2>Full stack software/web developer</h2>
+        <div class="id">
+            <h3>Languages:</h3>
+            <img id="slider" src="img/1.png"/>
+        </div>
+        <div class="right">
+            <br>
+            <h3>Experience:</h3>
+            <h3><a target="_blank" href="https://github.com/MateuszKrawczynski?tab=repositories">Github projects</a></h3>
+            <h3><a target="_blank" href="https://mateuszkrawczynski.github.io/OpenTalk/">AI chatbot "OpenTalk"</a></h3>
+            
+        </div>
+        <br><br><br>
+        <div class="skils">
+            <h3>Skills:</h3>
+            <h3>Creating websites</h3>
+            <h3>SQL databases</h3>
+            <h3>Linux</h3>
+            <h3>Using API's</h3>
+            <h3>Creating mobile apps</h3>
+            <h3>Creating desktop apps</h3>
+        </div>
+    </center>
+</body>
+</html>
